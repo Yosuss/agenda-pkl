@@ -7,7 +7,7 @@
     @vite('resources/css/app.css')
     <title>Agenda</title>
 </head>
-<body>
+<body class="">
     @yield('konten')
 </body>
 </html>
