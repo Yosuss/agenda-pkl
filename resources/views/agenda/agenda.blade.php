@@ -4,8 +4,10 @@
         <!-- Dashboard Menu -->
         <div class="bg-gray-100 w-2/12 h-screen items-center justify-center text-center">
             <a href="{{ url('/') }}">
-                {{-- <div class="my-10 mx-6 mt-14 font-bold text-2xl">agenda</div> --}}
-                <img src="{{ asset('aset/') }}" alt="" class="my-10 mx-6 mt-16 w-20">
+                <div class="mt-14 font-bold text-4xl">agenda</div>
+                <div class="mt-10 text-start mx-10 text-lg"><span class="font-bold">Nama</span> : Anugrah Lesmana Faturachman</div>
+                <div class="mb-10 mt-2 text-start mx-10 text-lg"><span class="font-bold">Kelas</span> : XII RPL B</div>
+                {{-- <img src="{{ asset('aset/') }}" alt="" class="my-10 mx-6 mt-16 w-20"> --}}
             </a>
             <div class="list gap-2 justify-center items-center m-6 border-b-2">
                 <a href="{{ url('/') }}">
