@@ -10,7 +10,7 @@ class agendaController extends Controller
     //
     public function index()
     {
-        $agenda = agendaModel::paginate(4);
+        $agenda = agendaModel::paginate(20);
         // $agenda = agendaModel::all();
         return view('agenda.agenda', compact('agenda'));
     }

@@ -45,7 +45,7 @@
                     </thead>
 
                     @foreach ($agenda as $item)
-                        <tbody id="data" class="data">
+                        <tbody id="data" class="data mt-28">
                             <td class="border-2 py-1">{{ $loop->iteration }}</td>
                             <td class="border-2 py-1">{{ $item->id_agenda }}</td>
                             <td class="border-2 py-1">{{ $item->tanggal }}</td>
