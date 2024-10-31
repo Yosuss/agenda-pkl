@@ -43,12 +43,18 @@ class AgendaSeeder extends Seeder
             '2023-10-24',
             '2023-10-25'
         ];
+        $oct5 = [
+            '2023-10-28',
+            '2023-10-29',
+            '2023-10-30',
+            '2023-10-31',
+        ];
 
         // Loop oct week 1
         foreach ($oct1 as $date) {
             DB::table('agenda')->insert([
                 'tanggal' => $date,
-                'kegiatan' => 'Belajar aravell'
+                'kegiatan' => 'Belajar laravel'
             ]);
         }
 
@@ -56,7 +62,7 @@ class AgendaSeeder extends Seeder
         foreach ($oct2 as $date) {
             DB::table('agenda')->insert([
                 'tanggal' => $date,
-                'kegiatan' => 'Buat crud dahsboard'
+                'kegiatan' => 'Buat crud dashboard'
             ]);
         }
 
@@ -64,7 +70,7 @@ class AgendaSeeder extends Seeder
         foreach ($oct3 as $date) {
             DB::table('agenda')->insert([
                 'tanggal' => $date,
-                'kegiatan' => 'Buuat crud pelanggan'
+                'kegiatan' => 'Buat crud pelanggan'
             ]);
         }
 
@@ -73,6 +79,14 @@ class AgendaSeeder extends Seeder
             DB::table('agenda')->insert([
                 'tanggal' => $date,
                 'kegiatan' => 'Buat crud Relasi pelanggan -> pengaduan'
+            ]);
+        }
+        
+        // Loop oct week 5
+        foreach ($oct5 as $date) {
+            DB::table('agenda')->insert([
+                'tanggal' => $date,
+                'kegiatan' => 'Buat crud agenda'
             ]);
         }
     }

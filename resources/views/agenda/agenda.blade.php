@@ -2,7 +2,7 @@
 @section('konten')
     <div class="bg-gray-100 dashboard flex capitalize">
         <!-- Dashboard Menu -->
-        <div class="bg-gray-100 w-2/12 h-screen items-center justify-center text-center">
+        <div class="bg-gray-100 w-2/12 h-sc9reen max-sm:hidden items-center justify-center text-center">
             <a href="{{ url('/') }}">
                 <div class="mt-14 font-bold text-4xl">agenda</div>
                 <div class="mt-10 text-start mx-10 text-lg"><span class="font-bold">Nama</span> : Anugrah Lesmana Faturachman</div>
@@ -27,7 +27,7 @@
         <!-- Dashboard Menu end -->
 
         <!-- Main Dashboard -->
-        <div class="main-dashboard w-10/12 bg-white rounded-3xl">
+        <div class="main-dashboard w-10/12 max-sm:w-full bg-white rounded-3xl">
 
             <!-- Navbar -->
             @include('component.navbar')
@@ -53,10 +53,10 @@
                             <td class="border-2 py-1">{{ $item->tanggal }}</td>
                             <td class="border-2 py-1">{{ $item->kegiatan }}</td>
                             <td class="flex">
-                                <div class="w-1/2">
+                                <div class="w-full">
                                     @include('component.btn-edit-agenda')
                                 </div>
-                                <div class="w-1/2">
+                                <div class="w-full">
                                     @include('component.btn-hapus-agenda')
                                 </div>
                             </td>
