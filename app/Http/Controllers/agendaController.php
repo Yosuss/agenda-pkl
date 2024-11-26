@@ -36,12 +36,16 @@ class agendaController extends Controller
 
     public function hapus($id)
     {
-        try {
-            agendaModel::where('id_agenda', $id)->delete();
-            return to_route('agenda');
-        } catch (\Exception $e) {
-            return to_route('agenda')->withErrors('gagal hapus');
-        }
+        // try {
+        //     agendaModel::where('id_agenda', $id)->delete();
+        //     return to_route('agenda');
+        // } catch (\Exception $e) {
+        //     return to_route('agenda')->withErrors('gagal hapus');
+        // }
+        
+        $data= agendaModel::findOrFail($id);
+        $data->delete();
+        return to_route('agenda')->withErrors('gagal hapus');
     }
 
     public function edit(Request $request, $id)
@@ -60,15 +64,22 @@ class agendaController extends Controller
             'kegiatan.required' => 'kegiatan harus diisi.',
         ]);
 
-        $agenda = agendaModel::findOrFail($id);
-        try {
-            $agenda->tanggal = $request->tanggal;
-            $agenda->kegiatan = $request->kegiatan;
-            $agenda->save();
-                return redirect()->route('agenda');
-        } catch (\Exception $e) {
-            return redirect()->route('agenda')->withErrors('Gagal mengupdate data.');
-        }
+        $data = agendaModel::findOrFail($id);
+        $data->tanggal = $request->tanggal;
+        $data->kegiatan = $request->kegiatan;
+        $data->save();
+        
         return redirect()->route('agenda')->with('success', 'inputan berhasil ditambahkan');
+        
+        // $agenda = agendaModel::findOrFail($id);
+        // try {
+        //     $agenda->tanggal = $request->tanggal;
+        //     $agenda->kegiatan = $request->kegiatan;
+        //     $agenda->save();
+        //         return redirect()->route('agenda');
+        // } catch (\Exception $e) {
+        //     return redirect()->route('agenda')->withErrors('Gagal mengupdate data.');
+        // }
+        // return redirect()->route('agenda')->with('success', 'inputan berhasil ditambahkan');
     }
 }
