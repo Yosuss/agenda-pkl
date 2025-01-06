@@ -118,6 +118,21 @@ class AgendaSeeder extends Seeder
             '2024-11-25',
         ];
 
+        $nov_des = [
+            '2024-11-26',
+            '2024-11-27',
+            '2024-11-28',
+            '2024-11-29',
+            '2024-12-02',
+        ];
+        
+        $nov_des_2 = [
+            '2024-12-03',
+            '2024-12-04',
+            '2024-12-05',
+            '2024-12-06',
+        ];
+
         // Loop
         foreach ($nov1 as $date) {
             DB::table('agenda')->insert([
@@ -157,7 +172,89 @@ class AgendaSeeder extends Seeder
                 'kegiatan' => 'SOP Perbaikan software'
             ]);
         }
+        
+        // Loop
+        foreach ($nov_des as $date) {
+            DB::table('agenda')->insert([
+                'tanggal' => $date,
+                'kegiatan' => 'crud data_pks '
+            ]);
+        }
+        
+        // Loop
+        foreach ($nov_des_2 as $date) {
+            DB::table('agenda')->insert([
+                'tanggal' => $date,
+                'kegiatan' => 'export pdf '
+            ]);
+        }
+        
+        $des_1 = [
+            '2024-12-09',
+            '2024-12-10',
+        ];
 
+        // Loop
+        foreach ($des_1 as $date) {
+            DB::table('agenda')->insert([
+                'tanggal' => $date,
+                'kegiatan' => 'refresh'
+            ]);
+        }
+
+        DB::table('agenda')->insert([
+            [
+                // 01 nov 
+                'tanggal' => '2024-12-11',
+                'kegiatan' => 'data pelanggan'
+            ],
+        ]);
+        
+        $des_2 = [
+            '2024-12-12',
+            '2024-12-13',
+        ];
+
+        // Loop
+        foreach ($des_2 as $date) {
+            DB::table('agenda')->insert([
+                'tanggal' => $date,
+                'kegiatan' => 'refresh'
+            ]);
+        }
+        
+        $des_3 = [
+            '2024-12-16',
+            '2024-12-17',
+            '2024-12-18',
+            '2024-12-19',
+            '2024-12-20',
+        ];
+
+        // Loop
+        foreach ($des_3 as $date) {
+            DB::table('agenda')->insert([
+                'tanggal' => $date,
+                'kegiatan' => 'Input data PKS'
+            ]);
+        }
+        
+        $des_jan = [
+            '2024-12-23',
+            '2024-12-27',
+            '2024-12-30',
+            '2024-01-01',
+            '2024-01-02',
+            '2024-01-03',
+        ];
+
+        // Loop
+        foreach ($des_jan as $date) {
+            DB::table('agenda')->insert([
+                'tanggal' => $date,
+                'kegiatan' => 'rebuild web sekolah'
+            ]);
+        }
 
         // DB::table('agenda')->insert([
         //     [

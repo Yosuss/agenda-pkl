@@ -27,7 +27,7 @@
         <!-- Dashboard Menu end -->
 
         <!-- Main Dashboard -->
-        <div class="main-dashboard w-10/12 max-sm:w-full bg-white rounded-3xl">
+        <div class="main-dashboard w-10/12 h-screen max-sm:w-full bg-white rounded-3xl">
 
             <!-- Navbar -->
             @include('component.navbar')

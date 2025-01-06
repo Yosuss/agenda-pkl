@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('agenda', function (Blueprint $table) {
             $table->id('id_agenda'); // Primary key
             $table->string('tanggal');
-            $table->string('kegiatan');
+            $table->string('kegiatan')->nullable();
             $table->timestamps(); // created_at dan updated_at
         });
 
