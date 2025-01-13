@@ -198,7 +198,7 @@ class AgendaSeeder extends Seeder
         foreach ($des_1 as $date) {
             DB::table('agenda')->insert([
                 'tanggal' => $date,
-                'kegiatan' => 'refresh'
+                'kegiatan' => ''
             ]);
         }
 
@@ -219,7 +219,7 @@ class AgendaSeeder extends Seeder
         foreach ($des_2 as $date) {
             DB::table('agenda')->insert([
                 'tanggal' => $date,
-                'kegiatan' => 'refresh'
+                'kegiatan' => ''
             ]);
         }
         
@@ -243,7 +243,6 @@ class AgendaSeeder extends Seeder
             '2024-12-23',
             '2024-12-27',
             '2024-12-30',
-            '2024-01-01',
             '2024-01-02',
             '2024-01-03',
         ];
@@ -253,6 +252,38 @@ class AgendaSeeder extends Seeder
             DB::table('agenda')->insert([
                 'tanggal' => $date,
                 'kegiatan' => 'rebuild web sekolah'
+            ]);
+        }
+        
+        $jan2 = [
+            '2024-01-06',
+            '2024-01-07',
+            '2024-01-08',
+            '2024-01-09',
+            '2024-01-10',
+        ];
+
+        // Loop
+        foreach ($jan2 as $date) {
+            DB::table('agenda')->insert([
+                'tanggal' => $date,
+                'kegiatan' => 'Input data PKS'
+            ]);
+        }
+        
+        $jan3 = [
+            '2024-01-13',
+            '2024-01-14',
+            '2024-01-15',
+            '2024-01-16',
+            '2024-01-17',
+        ];
+
+        // Loop
+        foreach ($jan3 as $date) {
+            DB::table('agenda')->insert([
+                'tanggal' => $date,
+                'kegiatan' => ''
             ]);
         }
 
