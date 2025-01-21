@@ -189,28 +189,10 @@ class AgendaSeeder extends Seeder
             ]);
         }
         
-        $des_1 = [
+        $des_2 = [
             '2024-12-09',
             '2024-12-10',
-        ];
-
-        // Loop
-        foreach ($des_1 as $date) {
-            DB::table('agenda')->insert([
-                'tanggal' => $date,
-                'kegiatan' => ''
-            ]);
-        }
-
-        DB::table('agenda')->insert([
-            [
-                // 01 nov 
-                'tanggal' => '2024-12-11',
-                'kegiatan' => 'data pelanggan'
-            ],
-        ]);
-        
-        $des_2 = [
+            '2024-12-11',
             '2024-12-12',
             '2024-12-13',
         ];
@@ -219,7 +201,7 @@ class AgendaSeeder extends Seeder
         foreach ($des_2 as $date) {
             DB::table('agenda')->insert([
                 'tanggal' => $date,
-                'kegiatan' => ''
+                'kegiatan' => 'input data pelanggan'
             ]);
         }
         
@@ -277,13 +259,18 @@ class AgendaSeeder extends Seeder
             '2024-01-15',
             '2024-01-16',
             '2024-01-17',
+            '2024-01-20',
+            '2024-01-21',
+            '2024-01-22',
+            '2024-01-23',
+            '2024-01-24',
         ];
 
         // Loop
         foreach ($jan3 as $date) {
             DB::table('agenda')->insert([
                 'tanggal' => $date,
-                'kegiatan' => ''
+                'kegiatan' => 'dupe app prima'
             ]);
         }
 
